@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b23">
+  <meta name="description" content="WorldEmpire Wiki — справочник по юнитам, зданиям, картам и развитию империи. Первые шаги и локальный мультиплеер.">
+  <title>WorldEmpire Wiki — Атлас вашей империи</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+  <aside class="sidebar" id="sidebar" aria-label="Разделы энциклопедии">
+    <a class="brand" href="#/" aria-label="WorldEmpire Wiki — главная">
+      <img src="./assets/favicon.svg" alt="" width="38" height="38">
+      <span>WorldEmpire<small>ЭНЦИКЛОПЕДИЯ ИГРЫ</small></span>
+    </a>
+    <button class="menu-close" id="menu-close" aria-label="Закрыть навигацию">Закрыть</button>
+    <div class="nav-caption">АТЛАС ИМПЕРИИ</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span>Справочник игрока<small>Суша. Море. Ваша стратегия.</small></div>
+  </aside>
+  <button class="scrim" id="scrim" tabindex="-1" aria-label="Закрыть навигацию" hidden></button>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="menu-toggle" id="menu-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Открыть навигацию"></button>
+      <form class="search" id="search-form" role="search">
+        <button id="search-icon" class="search-submit" type="submit" aria-label="Найти в энциклопедии"></button>
+        <input id="search" type="search" aria-label="Поиск по энциклопедии" placeholder="Поиск по энциклопедии…" autocomplete="off" maxlength="160">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+      <span class="topbar-note">Знания ведут к победе</span>
+    </header>
+    <main id="content" tabindex="-1"></main>
+    <footer class="footer"><a href="#/">WorldEmpire Wiki</a><span>Локальный прототип · Справочник по текущим правилам игры</span></footer>
+  </div>
+  <noscript><p class="noscript">Для поиска и навигации по энциклопедии включите JavaScript.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
