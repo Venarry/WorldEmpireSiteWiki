@@ -1,4 +1,4 @@
-// Snapshot of src/config.ts, verified 2026-10-20. No game code is loaded by the wiki.
+// Snapshot of src/config.ts, verified 2026-10-21. No game code is loaded by the wiki.
 export const balance = {
   "units": {
     "civilian": {
@@ -11,6 +11,39 @@ export const balance = {
       "train": 0,
       "upkeep": 0,
       "food": 0.055
+    },
+    "ratnik": {
+      "name": "Ратник",
+      "cost": 26,
+      "hp": 100,
+      "damage": 12,
+      "range": 17,
+      "speed": 62,
+      "train": 8,
+      "upkeep": 0.06,
+      "food": 0.07
+    },
+    "bogatyr": {
+      "name": "Богатырь",
+      "cost": 42,
+      "hp": 165,
+      "damage": 18,
+      "range": 22,
+      "speed": 68,
+      "train": 12,
+      "upkeep": 0.095,
+      "food": 0.09
+    },
+    "musketeer": {
+      "name": "Мушкетёр",
+      "cost": 52,
+      "hp": 60,
+      "damage": 24,
+      "range": 140,
+      "speed": 50,
+      "train": 14,
+      "upkeep": 0.115,
+      "food": 0.07
     },
     "militia": {
       "name": "Ополченец",
@@ -260,6 +293,20 @@ export const balance = {
     }
   },
   "factions": {
+    "human": {
+      "name": "Люди",
+      "short": "Люди",
+      "icon": "♙",
+      "description": "Универсальный класс без классовых бонусов и штрафов. Обычная экономика и пять стартовых строителей. Доступные ратники и крепкие подвижные богатыри прикрывают мушкетёров, которые открываются на Военном деле III. До этого уровня армия сражается только в ближнем бою.",
+      "gold": 1,
+      "growth": 1,
+      "startingBuilders": 5,
+      "cap": 1,
+      "recruit": 1,
+      "upkeep": 1,
+      "construction": 1,
+      "research": "none"
+    },
     "commune": {
       "name": "Всеобщая мобилизационная община",
       "short": "Община",
@@ -269,7 +316,7 @@ export const balance = {
       "growth": 1.25,
       "startingBuilders": 6,
       "cap": 1.3,
-      "recruit": 0.7,
+      "recruit": 1,
       "upkeep": 1,
       "construction": 1,
       "research": "none"
@@ -394,30 +441,37 @@ export const balance = {
   "factionStats": {
     "commune": {
       "militia": {
-        "hp": 55.25,
-        "damage": 7.65
+        "hp": 55,
+        "damage": 8,
+        "cost": 13
       },
       "archer": {
-        "hp": 40.8,
-        "damage": 5.95
+        "hp": 41,
+        "damage": 6,
+        "cost": 21
       }
     },
     "order": {
       "swordsman": {
-        "hp": 109.25,
-        "damage": 13.8
+        "hp": 109,
+        "damage": 14
       },
       "archer": {
-        "hp": 55.2,
-        "damage": 8.05
+        "hp": 55,
+        "damage": 8
       },
       "knight": {
-        "hp": 178.25,
-        "damage": 20.7
+        "hp": 178,
+        "damage": 21
       }
     }
   },
   "rosters": {
+    "human": [
+      "ratnik",
+      "bogatyr",
+      "musketeer"
+    ],
     "commune": [
       "militia",
       "archer"
@@ -437,5 +491,23 @@ export const balance = {
       "harpooner",
       "coastalBallista"
     ]
+  },
+  "attackIntervals": {
+    "civilian": 1.15,
+    "ratnik": 1.15,
+    "bogatyr": 1.15,
+    "musketeer": 2.6,
+    "militia": 1.15,
+    "archer": 1.15,
+    "spearman": 1.15,
+    "crossbow": 1.6,
+    "ballista": 2.4,
+    "swordsman": 1.15,
+    "knight": 1.15,
+    "transport": 1.15,
+    "warship": 1.15,
+    "sailor": 1.15,
+    "harpooner": 1.15,
+    "coastalBallista": 2.4
   }
 };
