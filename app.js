@@ -62,7 +62,7 @@ function catalog(sectionId) {
   update();
 }
 function renderBlock(b, index) {
-  return `<section class="article-section" id="part-${index}"><h2>${esc(b.title)}</h2>${(b.paragraphs || []).map(p => `<p>${esc(p)}</p>`).join('')}${b.list ? `<ul>${b.list.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : ''}${b.table ? `<div class="table-scroll" role="region" aria-label="${esc(b.title)}" tabindex="0"><table><thead><tr>${b.table.headings.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${b.table.rows.map(row => `<tr>${row.map((cell, i) => i === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}</section>`;
+  return `<section class="article-section" id="part-${index}"><h2>${esc(b.title)}</h2>${b.availableFactions ? `<p>Доступен: ${b.availableFactions.map(f => articleLink('faction-' + f, balance.factions[f].short)).join(', ')}.</p>` : ''}${(b.paragraphs || []).map(p => `<p>${esc(p)}</p>`).join('')}${b.list ? `<ul>${b.list.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : ''}${b.table ? `<div class="table-scroll" role="region" aria-label="${esc(b.title)}" tabindex="0"><table><thead><tr>${b.table.headings.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${b.table.rows.map(row => `<tr>${row.map((cell, i) => i === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}</section>`;
 }
 function articlePage(article) {
   const section = sections.find(s => s.id === article.section);

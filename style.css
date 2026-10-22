@@ -8,3 +8,4 @@
 @media(max-width:400px){main{padding-inline:19px}.topbar{padding-inline:15px}.hero h1{font-size:43px}.chapter-grid{grid-template-columns:1fr}.chapter{padding-block:16px}.chapter-number{display:block}.tutorial-banner{padding:16px 12px}.tutorial-banner p{font-size:10px}.tutorial-banner>img{width:45px;height:60px}.map-thumb{width:75px}.entry-row{gap:10px}.entry-row .entry-arrow{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .search-submit{border:0;background:transparent;color:inherit;padding:8px;display:flex;align-items:center;justify-content:center;border-radius:3px}.search-submit:hover{color:var(--gold)}.faction-mark .icon{width:27px;height:27px}
+.article-section p a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}.article-section p a:hover{color:var(--text)}
