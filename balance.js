@@ -1,4 +1,4 @@
-// Snapshot of src/config.ts, verified 2026-10-22. No game code is loaded by the wiki.
+// Snapshot of src/config.ts, verified 2026-10-23. No game code is loaded by the wiki.
 export const balance = {
   "units": {
     "civilian": {
@@ -38,7 +38,7 @@ export const balance = {
       "name": "Мушкетёр",
       "cost": 52,
       "hp": 60,
-      "damage": 24,
+      "damage": 20,
       "range": 140,
       "speed": 50,
       "train": 14,
@@ -53,7 +53,7 @@ export const balance = {
       "range": 17,
       "speed": 62,
       "train": 7,
-      "upkeep": 0.066,
+      "upkeep": 0.055,
       "food": 0.07
     },
     "archer": {
@@ -182,12 +182,23 @@ export const balance = {
     "cannon": {
       "name": "Полевая пушка",
       "cost": 155,
-      "hp": 115,
-      "damage": 34,
+      "hp": 100,
+      "damage": 28,
       "range": 170,
       "speed": 30,
       "train": 24,
       "upkeep": 0.25,
+      "food": 0.1
+    },
+    "obereg": {
+      "name": "Оберег",
+      "cost": 160,
+      "hp": 180,
+      "damage": 0,
+      "range": 0,
+      "speed": 42,
+      "train": 26,
+      "upkeep": 0.22,
       "food": 0.1
     },
     "truck": {
@@ -374,7 +385,7 @@ export const balance = {
       "name": "Люди",
       "short": "Люди",
       "icon": "♙",
-      "description": "Универсальный класс без классовых бонусов и штрафов. Обычная экономика и пять стартовых строителей. Доступные ратники и крепкие подвижные богатыри прикрывают мушкетёров, которые открываются на Военном деле III. До этого уровня армия сражается только в ближнем бою. Военное дело IV открывает полевую пушку с уроном по области.",
+      "description": "Универсальный класс без классовых бонусов и штрафов. Обычная экономика и пять стартовых строителей. Ратники и подвижные богатыри прикрывают мушкетёров, доступных на Военном деле II. Военное дело III открывает полевую пушку с уроном по области. IV открывает Оберег: постоянный щит снижает дальний урон по своим и союзным наземным юнитам на 20%.",
       "gold": 1,
       "growth": 1,
       "startingBuilders": 5,
@@ -566,7 +577,8 @@ export const balance = {
       "ratnik",
       "bogatyr",
       "musketeer",
-      "cannon"
+      "cannon",
+      "obereg"
     ],
     "commune": [
       "militia",
@@ -610,6 +622,7 @@ export const balance = {
     "harpooner": 1.15,
     "coastalBallista": 2.4,
     "cannon": 3,
+    "obereg": 1.15,
     "truck": 1.15,
     "armoredCar": 0.4,
     "tankette": 0.8,
@@ -619,8 +632,9 @@ export const balance = {
     "human": {
       "ratnik": 0,
       "bogatyr": 1,
-      "musketeer": 3,
-      "cannon": 4
+      "musketeer": 2,
+      "cannon": 3,
+      "obereg": 4
     },
     "commune": {
       "militia": 0,
@@ -653,5 +667,9 @@ export const balance = {
     "upkeep": 0.1
   },
   "truckCapacity": 6,
-  "marketFoodPerGold": 10
+  "marketFoodPerGold": 10,
+  "obereg": {
+    "radius": 110,
+    "resistance": 0.2
+  }
 };
